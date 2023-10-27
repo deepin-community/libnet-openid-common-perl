@@ -1,5 +1,93 @@
-template-repository (1.0-1) unstable; urgency=medium
+libnet-openid-common-perl (1.20-2) unstable; urgency=medium
 
-  * Initial release
+  [ gregor herrmann ]
+  * debian/copyright: change Copyright-Format 1.0 URL to HTTPS.
+  * debian/upstream/metadata: change GitHub/CPAN URL(s) to HTTPS.
+  * debian/upstream/metadata: use HTTPS for GitHub URLs.
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+  [ Salvatore Bonaccorso ]
+  * Update Vcs-* headers for switch to salsa.debian.org
+
+  [ gregor herrmann ]
+  * debian/watch: use uscan version 4.
+
+  [ Debian Janitor ]
+  * Trim trailing whitespace.
+  * Bump debhelper from old 9 to 12.
+  * Set debhelper-compat version in Build-Depends.
+  * Remove obsolete fields Contact, Name from debian/upstream/metadata
+    (already present in machine-readable debian/copyright).
+  * Remove constraints unnecessary since stretch:
+    + Build-Depends-Indep: Drop versioned constraint on libcrypt-dh-gmp-perl.
+    + libnet-openid-common-perl: Drop versioned constraint on
+      libcrypt-dh-gmp-perl in Depends.
+    + libnet-openid-common-perl: Drop versioned constraint on
+      libnet-openid-consumer-perl in Replaces.
+    + libnet-openid-common-perl: Drop versioned constraint on
+      libnet-openid-consumer-perl in Breaks.
+
+ -- Jelmer Vernooĳ <jelmer@debian.org>  Thu, 16 Jun 2022 20:41:39 +0100
+
+libnet-openid-common-perl (1.20-1.1) unstable; urgency=medium
+
+  * Non maintainer upload by the Reproducible Builds team.
+  * No source change upload to rebuild on buildd with .buildinfo files.
+
+ -- Holger Levsen <holger@debian.org>  Tue, 14 Jun 2022 14:08:41 +0200
+
+libnet-openid-common-perl (1.20-1) unstable; urgency=medium
+
+  * Team upload.
+  * Import upstream version 1.20.
+  * Drop spelling.patch, fixed upstream.
+
+ -- gregor herrmann <gregoa@debian.org>  Sat, 13 Feb 2016 15:47:19 +0100
+
+libnet-openid-common-perl (1.19-1) unstable; urgency=medium
+
+  * Team upload.
+
+  * Move to the Debian Perl Group (cf. https://bugs.debian.org/814022).
+  * debian/control: Changed: Homepage field changed to metacpan.org URL;
+    Maintainer set to Debian Perl Group <pkg-perl-
+    maintainers@lists.alioth.debian.org> (was: Dominic Hargreaves
+    <dom@earth.li>); Dominic Hargreaves <dom@earth.li> moved to
+    Uploaders.
+  * debian/watch: use metacpan-based URL.
+  * debian/copyright: Source URL changed to metacpan.org URL.
+  * Add debian/upstream/metadata.
+
+  * Import upstream version 1.19 (closes: #814022).
+  * Don't install README anymore.
+  * Update upstream copyright information.
+  * Mark package as autopkgtest-able.
+  * Bump debhelper compatibility level to 9.
+  * Declare compliance with Debian Policy 3.9.7.
+  * Remove version from libhtml-parser-perl (build) dependency and
+    unversioned perl from Depends.
+  * Update Vcs-* fields.
+  * Add a patch to fix a spelling mistake.
+  * Mention module name in short description.
+
+ -- gregor herrmann <gregoa@debian.org>  Sun, 07 Feb 2016 23:22:38 +0100
+
+libnet-openid-common-perl (1.18-1) unstable; urgency=medium
+
+  * New upstream release
+  * Update Standards-Version (no changes)
+  * Conform with copyright-format 1.0
+
+ -- Dominic Hargreaves <dom@earth.li>  Sun, 09 Feb 2014 14:15:10 +0000
+
+libnet-openid-common-perl (1.17-1) unstable; urgency=low
+
+  * New upstream release
+  * Update Standards-Version (no changes)
+
+ -- Dominic Hargreaves <dom@earth.li>  Sun, 05 May 2013 17:55:52 +0100
+
+libnet-openid-common-perl (1.14-1) unstable; urgency=low
+
+  * Initial Release (closes: #648475)
+
+ -- Dominic Hargreaves <dom@earth.li>  Fri, 11 Nov 2011 22:07:41 +0000

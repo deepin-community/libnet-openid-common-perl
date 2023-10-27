@@ -1,15 +1,28 @@
-Source: template-repository
-Section: unknown
+Source: libnet-openid-common-perl
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Uploaders: Dominic Hargreaves <dom@earth.li>
+Section: perl
+Testsuite: autopkgtest-pkg-perl
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Build-Depends: debhelper-compat (= 13)
+Build-Depends-Indep: libcrypt-dh-gmp-perl,
+                     libhtml-parser-perl,
+                     libhttp-message-perl,
+                     libxml-simple-perl,
+                     perl
+Standards-Version: 3.9.7
+Vcs-Git: https://salsa.debian.org/perl-team/modules/packages/libnet-openid-common-perl.git
+Vcs-Browser: https://salsa.debian.org/perl-team/modules/packages/libnet-openid-common-perl
+Homepage: https://metacpan.org/release/Net-OpenID-Common
 
-Package: template-repository
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Package: libnet-openid-common-perl
+Architecture: all
+Depends: ${misc:Depends},
+         ${perl:Depends},
+         libcrypt-dh-gmp-perl,
+         libhtml-parser-perl,
+         libhttp-message-perl,
+         libxml-simple-perl
+Description: libraries shared between Net::OpenID::Consumer and Net::OpenID::Server
+ The Consumer and Server implementations share a few libraries which are
+ provided by this package as Net::Openid::Common and others.
